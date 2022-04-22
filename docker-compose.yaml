@@ -1,0 +1,12 @@
+version: "3.9"
+services:
+  bot:
+    build:
+      context: ./bot
+    depends_on:
+      - server
+  server:
+    build:
+      context: ./pokemon-showdown
+    ports:
+      - "8000:8000"
